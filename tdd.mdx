@@ -1,0 +1,209 @@
+import Code from 'mdx-code';
+import Layout from './layout';
+import { Box } from 'theme-ui'
+import { themes } from 'mdx-deck'
+import { hack } from '@mdx-deck/themes'
+export const theme = themes.hack
+
+import ImgPath from "./assets/quote-one-of-my-most-productive-days-was-throwing-away-1-000-lines-of-code-ken-thompson-29-37-61.jpg"
+import DijkstraProof from "./assets/dijkstra_proof_tests_error.jpg"
+
+# <Box color="tomato">TDD</Box>
+
+### <Box color="red">1. QA</Box>
+### <Box color="red">2. Les Tests</Box>
+### <Box color="red">3. TDD vs Approche traditionnelle</Box>
+### <Box color="red">4. Utilité des tests ?</Box>
+### <Box color="red">5. Pour aller plus loin</Box>
+
+---
+
+# 1. QA
+
+<Steps>
+
+### Programmer, c'est compliqué
+
+</Steps>
+
+<Image src={ImgPath} style={{width: "85%", height: "50%"}} />
+
+
+---
+
+# 1. QA
+
+<Steps>
+
+<pre>« There are only 2 ways to write error-free programs;{"\n"}
+    only the third one works »</pre>
+
+<Box>
+« Without requirements and design, programming is the art of adding bugs to an empty text file. »
+
+― Louis Srygley 
+</Box>
+
+<math>
+ <mrow>
+    <mi>P(error)</mi>
+    <mo> = </mo>
+  <mfrac>
+   <mi>1</mi>
+   <mi><mn>1</mn> <mo>+</mo> <msup><mi>e</mi><mi>-(loc)</mi></msup></mi>
+  </mfrac>
+ </mrow>
+</math>
+
+
+</Steps>
+
+---
+
+# <Box color="tomato">TDD</Box>
+
+### <Box color="green">1. QA</Box>
+### <Box color="red">2. Les Tests</Box>
+### <Box color="red">3. TDD vs Approche traditionnelle</Box>
+### <Box color="red">4. Utilité des tests ?</Box>
+### <Box color="red">5. Pour aller plus loin</Box>
+
+---
+
+# 2. Les Tests
+
+L'un des moyen les plus efficace de mitigation d'erreur consiste à faire des tests.
+
+<Steps>
+
+### A/B testing
+### Tests unitaires
+
+</Steps>
+
+---
+
+# <Box color="tomato">TDD</Box>
+
+### <Box color="green">1. QA</Box>
+### <Box color="green">2. Les Tests</Box>
+### <Box color="red">3. TDD vs Approche traditionnelle</Box>
+### <Box color="red">4. Utilité des tests ?</Box>
+### <Box color="red">5. Pour aller plus loin</Box>
+
+---
+
+# 3. TDD vs Approche traditionnelle
+
+---
+
+## Approche traditionnelle
+
+<Steps>
+
+### Besoin du client
+### Cahier des charges
+### Spécification
+### Développement
+### Tests
+
+</Steps>
+
+---
+
+### Test-driven Development
+
+Avec le Test-driven development, on écrit les tests <strong>avant</strong> d'écrire le code du projet.
+
+---
+
+# <Box color="tomato">TDD</Box>
+
+### <Box color="green">1. QA</Box>
+### <Box color="green">2. Les Tests</Box>
+### <Box color="green">3. TDD vs Approche traditionnelle</Box>
+### <Box color="red">4. Utilité des tests ?</Box>
+### <Box color="red">5. Pour aller plus loin</Box>
+
+---
+
+# 4. Utilité des tests ?
+
+---
+
+# <Box color="tomato">TDD</Box>
+
+### <Box color="green">1. QA</Box>
+### <Box color="green">2. Les Tests</Box>
+### <Box color="green">3. TDD vs Approche traditionnelle</Box>
+### <Box color="green">4. Utilité des tests ?</Box>
+### <Box color="red">5. Pour aller plus loin</Box>
+
+---
+
+# 5. Pour aller plus loin
+
+## <a href="https://github.com/dubzzz/fast-check/blob/main/documentation/HandsOnPropertyBased.md">Property-based</a> / Specification-driven testing
+
+<ul>
+<li><a href="http://www.cse.chalmers.se/~rjmh/QuickCheck/">QuickCheck</a></li>
+<Steps>
+<li><a href="https://hypothesis.works/">Hypothesis</a></li>
+<li><a href="https://www.crockford.com/jscheck.html">JSCheck</a> <a href="https://github.com/douglascrockford/JSCheck">(gh)</a></li>
+<li><a href="https://github.com/dubzzz/fast-check">Fast-Check</a></li>
+<li><a href="https://jsverify.github.io/">JSVerify</a></li>
+</Steps>
+</ul>
+
+
+---
+
+# <Box color="green">TDD</Box>
+
+### <Box color="green">1. QA</Box>
+### <Box color="green">2. Les Tests</Box>
+### <Box color="green">3. TDD vs Approche traditionnelle</Box>
+### <Box color="green">4. Utilité des tests ?</Box>
+### <Box color="green">5. Pour aller plus loin</Box>
+
+---
+
+<Image src={DijkstraProof} style={{width: "100%", height: "40%"}} />
+
+# <Box color="yellow">Questions ?</Box>
+
+---
+
+<ul>
+<li>One</li>
+<Steps>
+<li>Two</li>
+<li>Three</li>
+<li>Four</li>
+</Steps>
+</ul>
+
+---
+
+## One
+
+<Steps>
+
+## Two
+## Three
+
+</Steps>
+
+---
+
+```jsx
+<button>Click me!</button>
+```
+
+<Code>
+
+```js A playground slide
+console.log('Hello World')
+```
+
+</Code>
