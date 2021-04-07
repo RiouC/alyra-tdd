@@ -38,10 +38,24 @@ import DijkstraProof from "./assets/dijkstra_proof_tests_error.jpg"
 <pre>« There are only 2 ways to write error-free programs;{"\n"}
     only the third one works »</pre>
 
+
+<Box>
+<pre>« It's hard enough to find an error in your code when you're looking for it;{"\n"}
+    it's even harder when you've assumed your code is error-free. »</pre>
+
+― Steve McConnell
+</Box>
+
 <Box>
 « Without requirements and design, programming is the art of adding bugs to an empty text file. »
 
 ― Louis Srygley 
+</Box>
+
+<Box>
+« If debugging is the process of removing software bugs, then programming must be the process of putting them. »
+
+– Edsger Dijkstra
 </Box>
 
 <math>
@@ -76,10 +90,56 @@ L'un des moyen les plus efficace de mitigation d'erreur consiste à faire des te
 
 <Steps>
 
-### A/B testing
+## 4 "niveaux" de tests
+
 ### Tests unitaires
+### Tests d'intégration
+### Tests de validation 
+### Tests d'acceptation
 
 </Steps>
+
+---
+
+## Tests unitaires
+
+<Steps>
+
+- Un test est un ensemble de cas à tester.
+
+- Une testsuite contient plusieurs tests.
+
+- Chaque test devrait tester plusieurs cas (testcase)
+
+</Steps>
+
+---
+
+<Code>
+
+```js Exemple tests unitaires assert - Test
+const assert = require('assert').strict;
+const { xor } = require("./xor")
+
+assert(xor(false, false) === false)
+assert(xor(true, false) === true)
+assert(xor(false, true) === true)
+assert(xor(true, true) === false)
+```
+
+</Code>
+
+<Code>
+
+```js Exemple tests unitaires assert - Fonction
+const xor = (a, b) => {
+    return (a || b) && !(a && b)
+}
+
+exports.xor = xor
+```
+
+</Code>
 
 ---
 
@@ -97,7 +157,7 @@ L'un des moyen les plus efficace de mitigation d'erreur consiste à faire des te
 
 ---
 
-## Approche traditionnelle
+## Approche traditionnelle (Cycle en V)
 
 <Steps>
 
@@ -105,7 +165,7 @@ L'un des moyen les plus efficace de mitigation d'erreur consiste à faire des te
 ### Cahier des charges
 ### Spécification
 ### Développement
-### Tests
+### Tests (unitaires => intégration => validation => acceptation)
 
 </Steps>
 
@@ -128,6 +188,16 @@ Avec le Test-driven development, on écrit les tests <strong>avant</strong> d'é
 ---
 
 # 4. Utilité des tests ?
+
+<Steps>
+
+### Architecture du projet en amont
+### Ne pas être influencé par le code déjà écrit
+### Regression
+### <Box color="white"><a href="https://docs.python.org/3/library/doctest.html" color="white">Documentation "vivante"</a></Box>
+### Sérieux professionel
+
+</Steps>
 
 ---
 
@@ -185,16 +255,6 @@ Avec le Test-driven development, on écrit les tests <strong>avant</strong> d'é
 
 ---
 
-## One
-
-<Steps>
-
-## Two
-## Three
-
-</Steps>
-
----
 
 ```jsx
 <button>Click me!</button>
