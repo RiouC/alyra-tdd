@@ -12,5 +12,8 @@
       "start": "mdx-deck tdd.mdx",
       "build": "mdx-deck build tdd.mdx",
       "pdf": "mdx-deck pdf tdd.mdx"
+   },
+   "devDependencies": {
+      "jest": "^26.6.3"
    }
 }
