@@ -9,6 +9,7 @@
       "mdx-deck": "^4.1.1"
    },
    "scripts": {
-      "start": "mdx-deck tdd.mdx"
+      "start": "mdx-deck tdd.mdx",
+      "build": "mdx-deck build tdd.mdx"
    }
 }

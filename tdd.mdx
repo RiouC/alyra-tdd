@@ -143,6 +143,62 @@ exports.xor = xor
 
 ---
 
+<Code>
+
+```js Exemple tests unitaires Jest - Test
+const assert = require('assert').strict;
+const { xor } = require("./xor")
+
+assert(xor(false, false) === false)
+assert(xor(true, false) === true)
+assert(xor(false, true) === true)
+assert(xor(true, true) === false)
+```
+
+</Code>
+
+<Code>
+
+```js Exemple tests unitaires Jest - Fonction
+const xor = (a, b) => {
+    return (a || b) && !(a && b)
+}
+
+exports.xor = xor
+```
+
+</Code>
+
+---
+
+<Code>
+
+```js Exemple tests unitaires Mocha - Test
+const assert = require('assert').strict;
+const { xor } = require("./xor")
+
+assert(xor(false, false) === false)
+assert(xor(true, false) === true)
+assert(xor(false, true) === true)
+assert(xor(true, true) === false)
+```
+
+</Code>
+
+<Code>
+
+```js Exemple tests unitaires Mocha - Fonction
+const xor = (a, b) => {
+    return (a || b) && !(a && b)
+}
+
+exports.xor = xor
+```
+
+</Code>
+
+---
+
 # <Box color="tomato">TDD</Box>
 
 ### <Box color="green">1. QA</Box>
@@ -171,9 +227,23 @@ exports.xor = xor
 
 ---
 
-### Test-driven Development
+## Test-driven Development
 
-Avec le Test-driven development, on écrit les tests <strong>avant</strong> d'écrire le code du projet.
+Avec le Test-driven development, on écrit les tests <strong>avant</strong> d'écrire le code du projet. (Test First Design)
+
+C'est une méthode de développement itérative et incrémentale.
+
+---
+
+### Les 3 lois de TDD
+
+<Steps>
+
+1. Vous ne pouvez pas écrire de code de production tant que vous n'avez pas écrit un test unitaire qui échoue.
+2. Vous ne pouvez pas écrire plus d'un test unitaire que nécessaire pour échouer, et ne pas compiler revient à échouer.
+3. Vous ne pouvez pas écrire plus de code de production que nécessaire pour que le test unitaire actuellement en échec réussisse.
+
+</Steps>
 
 ---
 
