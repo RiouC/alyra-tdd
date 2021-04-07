@@ -144,16 +144,18 @@ exports.xor = xor
 
 ---
 
+<Box>
+<button style={{marginRight: "2em"}}><a href="https://asciinema.org/a/Sem52QDXSV20DHXmwOTsdCMX7" style={{color: "black"}}>Asciinema</a></button><button><a href="https://exercism.io/my/tracks/javascript" style={{color: "black"}}>Exercism</a></button>
+</Box>
+
 <Code>
 
 ```js Exemple tests unitaires Jest - Test
-const assert = require('assert').strict;
-const { xor } = require("./xor")
+const sum = require('./sum');
 
-assert(xor(false, false) === false)
-assert(xor(true, false) === true)
-assert(xor(false, true) === true)
-assert(xor(true, true) === false)
+test('adds 1 + 2 to equal 3', () => {
+    expect(sum(1, 2)).toBe(3);
+});
 ```
 
 </Code>
@@ -161,27 +163,29 @@ assert(xor(true, true) === false)
 <Code>
 
 ```js Exemple tests unitaires Jest - Fonction
-const xor = (a, b) => {
-    return (a || b) && !(a && b)
+const sum = (a, b) => {
+    return a + b;
 }
-
-exports.xor = xor
+module.exports = sum;
 ```
 
 </Code>
 
 ---
 
+<Box>
+<button style={{marginRight: "2em"}}><a href="https://asciinema.org/a/1sN4tQqGGselZutygxAuHFbTJ" style={{color: "black"}}>Asciinema</a></button><button><a href="https://mochajs.org/#reporting" style={{color: "black"}}>Reporting</a></button>
+</Box>
+
 <Code>
 
 ```js Exemple tests unitaires Mocha - Test
-const assert = require('assert').strict;
-const { xor } = require("./xor")
+const { add } = require('./add');
+const assert = require('assert');
 
-assert(xor(false, false) === false)
-assert(xor(true, false) === true)
-assert(xor(false, true) === true)
-assert(xor(true, true) === false)
+it('should add to numbers from an es module', () => {
+    assert.equal(add(3, 5), 8);
+});
 ```
 
 </Code>
@@ -189,11 +193,26 @@ assert(xor(true, true) === false)
 <Code>
 
 ```js Exemple tests unitaires Mocha - Fonction
-const xor = (a, b) => {
-    return (a || b) && !(a && b)
+const add = (a, b) => {
+    return a + b;
 }
+exports.add = add;
+```
 
-exports.xor = xor
+</Code>
+
+<Code>
+
+```js Exemple tests unitaires Mocha - Test
+var assert = require('assert');
+
+describe('Array', function () {
+    describe('#indexOf()', function () {
+        it('should return -1 when the value is not present', function () {
+            assert.equal([1, 2, 3].indexOf(4), -1);
+        });
+    });
+});
 ```
 
 </Code>

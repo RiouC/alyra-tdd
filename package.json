@@ -11,9 +11,12 @@
    "scripts": {
       "start": "mdx-deck tdd.mdx",
       "build": "mdx-deck build tdd.mdx",
-      "pdf": "mdx-deck pdf tdd.mdx"
+      "pdf": "mdx-deck pdf tdd.mdx",
+      "test": "jest jest/",
+      "mocha": "mocha mocha/"
    },
    "devDependencies": {
-      "jest": "^26.6.3"
+      "jest": "^26.6.3",
+      "mocha": "^8.3.2"
    }
 }
