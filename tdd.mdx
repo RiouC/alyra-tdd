@@ -12,6 +12,8 @@ export const theme = themes.hack
 
 import ImgPath from "./assets/quote-one-of-my-most-productive-days-was-throwing-away-1-000-lines-of-code-ken-thompson-29-37-61.jpg"
 import DijkstraProof from "./assets/dijkstra_proof_tests_error.jpg"
+import Glenford from "./assets/glenford_myers.jpg"
+import Cycle from "./assets/cycle-global-tdd.png"
 
 # <Box color="tomato">TDD</Box>
 
@@ -219,6 +221,10 @@ describe('Array', function () {
 
 ---
 
+<Image src={Glenford} style={{width: "85%", height: "50%"}} />
+
+---
+
 # <Box color="tomato">TDD</Box>
 
 ### <Box color="green">1. QA</Box>
@@ -253,15 +259,46 @@ Avec le Test-driven development, on écrit les tests <strong>avant</strong> d'é
 
 C'est une méthode de développement itérative et incrémentale.
 
+Le TDD se prête très bien au pair programming.
+
+KISS / YAGNI friendly
+
 ---
 
 ### Les 3 lois de TDD
 
 <Steps>
 
-1. Vous ne pouvez pas écrire de code de production tant que vous n'avez pas écrit un test unitaire qui échoue.
-2. Vous ne pouvez pas écrire plus d'un test unitaire que nécessaire pour échouer, et ne pas compiler revient à échouer.
-3. Vous ne pouvez pas écrire plus de code de production que nécessaire pour que le test unitaire actuellement en échec réussisse.
+<Box>1. Vous devez écrire un test qui échoue avant de pouvoir écrire le code de production correspondant.</Box>
+<Box>2. Vous devez écrire une seule assertion à la fois, qui fait échouer le test ou qui échoue à la compilation.</Box>
+<Box>3. Vous devez écrire le minimum de code de production pour que l'assertion du test actuellement en échec soit satisfaite.</Box>
+
+</Steps>
+
+---
+
+<Image src={Cycle} style={{width: "85%", height: "85%"}} />
+
+---
+
+<Box style={{marginBottom: "3em"}}>
+
+« Good design adds value faster than it adds cost. »
+
+– Joel Spolsky
+
+</Box>
+
+<Steps>
+
+<Box style={{marginTop: "3em"}}>
+
+
+    « First, solve the problem.
+      Then, write the code. »
+
+– John Johnson
+</Box>
 
 </Steps>
 
@@ -281,10 +318,12 @@ C'est une méthode de développement itérative et incrémentale.
 
 <Steps>
 
-### Architecture du projet en amont
-### Ne pas être influencé par le code déjà écrit
+### Architecture du projet en amont  (TDD)
+### Ne pas être influencé par le code déjà écrit  (TDD)
+### <Box color="white"><a href="https://docs.python.org/3/library/doctest.html" color="white">Documentation "vivante"</a>  (TDD)</Box>
+### Complexité minimale  (TDD)
+### Meilleure couverture de tests (TDD)
 ### Regression
-### <Box color="white"><a href="https://docs.python.org/3/library/doctest.html" color="white">Documentation "vivante"</a></Box>
 ### Sérieux professionel
 
 </Steps>
@@ -332,3 +371,4 @@ C'est une méthode de développement itérative et incrémentale.
 
 # <Box color="yellow">Questions ?</Box>
 
+( <a href="https://alyra-tdd.netlify.app">https://alyra-tdd.netlify.app</a> )
